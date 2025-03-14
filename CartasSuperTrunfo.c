@@ -32,7 +32,7 @@ int main() { // função principal
     printf("Populaçao: %d - Area: %.2f\n", populacao, area);
     printf("PIB: %.2f - Pontos Turisticos: %d\n", PIB, PontosTuristicos);
 
-    printf("\nPressione Enter para cadastrar outra carta...");
+    printf("Pressione Enter para cadastrar outra carta...");
     getchar(); // Pausa para o usuário pressionar Enter
 
     return 0;
