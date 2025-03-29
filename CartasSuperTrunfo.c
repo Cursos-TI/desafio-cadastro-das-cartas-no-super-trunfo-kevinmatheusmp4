@@ -31,10 +31,10 @@ int main() { // função principal
     printf("========Digite os dados da Carta 1=========\n");
 
     printf("Digite o nome do primeiro estado: \n");
-    scanf("%s", estado1); // inserindo a estrutura antes para que se armazene a variável naquela estrutura
+    fgets(estado1, 50, stdin); // fgets é mais seguro que scanf para strings
 
     printf("Digite o nome da capital desse estado: \n");
-    scanf("%s", cidade1);
+    fgets(cidade1, 50, stdin);
 
     printf("Digite o número da populaçao desta cidade: \n");
     scanf("%d", &populacao1);
@@ -51,7 +51,7 @@ int main() { // função principal
     printf("Digite o codigo da carta: \n");
     scanf("%s", codigodacarta1);
 
-DensidadePopulacional1 = populacao1/area1; // calcular densidade populacional da carta 1
+    DensidadePopulacional1 = populacao1/area1; // calcular densidade populacional da carta 1
 
     printf("A Densidade Populacional é: %.2f\n", DensidadePopulacional1);
     
@@ -65,10 +65,10 @@ DensidadePopulacional1 = populacao1/area1; // calcular densidade populacional da
     // Dados da carta 2
 
     printf("\nDigite o nome do  estado: \n");
-    scanf("%s", estado2); 
+    fgets(estado2, 50, stdin);
 
     printf("Digite o nome da capital desse estado: \n");
-    scanf("%s", cidade2);
+    fgets(cidade2, 50, stdin);
 
     printf("Digite o número da populaçao desta cidade: \n");
     scanf("%d", &populacao2);
@@ -111,7 +111,7 @@ DensidadePopulacional1 = populacao1/area1; // calcular densidade populacional da
     // hora de fazer as comparações e mostrar os resultados
 
 
-    printf("\nComparando População: \n");
+    printf("\nComparando População: ");
     if (populacao1 > populacao2) {
         printf("Carta 1 venceu!\n");
     } else if (populacao2 > populacao1) {
@@ -121,7 +121,7 @@ DensidadePopulacional1 = populacao1/area1; // calcular densidade populacional da
     }
 
     // Comparar área
-    printf("Comparando Área: \n");
+    printf("Comparando Área: ");
     if (area1 > area2) {
         printf("Carta 1 venceu!\n");
     } else if (area2 > area1) {
@@ -131,7 +131,7 @@ DensidadePopulacional1 = populacao1/area1; // calcular densidade populacional da
     }
 
     // Comparar PIB
-    printf("Comparando PIB: \n");
+    printf("Comparando PIB: ");
     if (PIB1 > PIB2) {
         printf("Carta 1 venceu!\n");
     } else if (PIB2 > PIB1) {
@@ -141,7 +141,7 @@ DensidadePopulacional1 = populacao1/area1; // calcular densidade populacional da
     }
 
     // Comparar Pontos Turísticos
-    printf("Comparando Pontos Turísticos: \n");
+    printf("Comparando Pontos Turísticos: ");
     if (PontosTuristicos1 > PontosTuristicos2) {
         printf("Carta 1 venceu!\n");
     } else if (PontosTuristicos2 > PontosTuristicos1) {
@@ -151,7 +151,7 @@ DensidadePopulacional1 = populacao1/area1; // calcular densidade populacional da
     }
 
     // Comparar Densidade Populacional
-    printf("Comparando Densidade Populacional:\n");
+    printf("Comparando Densidade Populacional: ");
     if (DensidadePopulacional1 < DensidadePopulacional2) {
         printf("Carta 1 venceu!\n");
     } else if (DensidadePopulacional2 < DensidadePopulacional1) {
@@ -161,7 +161,7 @@ DensidadePopulacional1 = populacao1/area1; // calcular densidade populacional da
     }
 
     // Comparar PIB per capita
-    printf("Comparando PIB per capita: \n");
+    printf("Comparando PIB per capita: ");
     if (PIBpercapta1 > PIBpercapta2) {
         printf("Carta 1 venceu!\n");
     } else if (PIBpercapta2 > PIBpercapta1) {
@@ -171,7 +171,7 @@ DensidadePopulacional1 = populacao1/area1; // calcular densidade populacional da
     }
 
     // Comparar "Super poder" (soma de todos os dados)
-    printf("Comparando Super poder: \n");
+    printf("Comparando Super poder: ");
     float superPoder1 = populacao1 + area1 + PIB1 + PontosTuristicos1 - DensidadePopulacional1;
     float superPoder2 = populacao2 + area2 + PIB2 + PontosTuristicos2 - DensidadePopulacional2;
     if (superPoder1 > superPoder2) {
@@ -184,7 +184,7 @@ DensidadePopulacional1 = populacao1/area1; // calcular densidade populacional da
 
     //mensagem de fim de jogo
     printf("\n=======FIM DO JOGO=========\n"); 
-    printf("Obrigado por jogar!\n");    
+    printf("Obrigado por jogar!\n\n");    
 
     return 0;
 
